@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Registration Home</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f7efe5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.homepage-container {
+  text-align: center;
+  background-color: #fff8e7;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #5c3c00;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-button {
+  text-decoration: none;
+  background-color: #4e1f00;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #6b2f00;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+ 
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  color: #aaa;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .close:hover {
+  color: black;
+}
+
+.about-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #4e1f00;
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
+<body>
+  <div class="homepage-container">
+    <img src="logogo.png" alt="">
+    <h1>Welcome to Pet Registration</h1>
+    <p>Please choose an option below to continue:</p>
+    <div class="button-group">
+      <a href="owner.html" class="home-button">Register Pet</a>
+    </div>
+    <a href="#" id="open-about" class="about-link">About Us</a>
+  </div>
+  <div id="about-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>About FurSure</h2>
+      <p>
+        FurSure is your one-stop pet registration platform, making it easier to
+        keep track of your pets and ensure their safety. Built with love for both
+        animals and their humans. 🐾
+      </p>
+    </div>
+  </div>
+  <script>
+    const modal = document.getElementById("about-modal");
+    const openBtn = document.getElementById("open-about");
+    const closeBtn = document.querySelector(".modal .close");
+
+    openBtn.onclick = function (e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  }
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  </script>
+</body>

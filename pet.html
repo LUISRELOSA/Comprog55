@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Registration</title>
+    <link rel="stylesheet" href="pet.css">
+</head>
+<body>
+    <section class="container">
+        <header>Pet's Form</header>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label for="">Name of Your Pet</label>
+                <input type="text" placeholder="Enter your Pets name" required>
+            </div>
+            <div class="input-box">
+                <label for="">Pets Breed</label>
+                <input type="text" placeholder="Enter Pet Breed" required>
+            </div>
+            <div class="input-box">
+                <label for="">Date of Ownership</label>
+                <input type="date" placeholder="Date acquired" required>
+            </div>
+                <div class="input-box">
+                    <label for="">Owners Name</label>
+                    <input type="text" placeholder="Enter Owners Name" required>
+                </div>
+            </div>
+            <div class="gender-">
+                <h3>Gender</h3>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check" name="gender" checked>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check" name="gender">
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+            </div>
+            <div class="pet-">
+                <h3>Type Of Pet</h3>
+                <div class="pet-option">
+                    <div class="pet">
+                        <input type="radio" id="check" name="pet" checked>
+                        <label for="check-male">Dog</label>
+                    </div>
+                    <div class="pet">
+                        <input type="radio" id="check" name="pet">
+                        <label for="check-female">Cat</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-box addres">
+                <label for="">Owners Address In Case of Lost Pet</label>
+                <input type="text" placeholder="Enter Street Address" required>
+                <input type="number" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="input-box">
+                <label for="pet-photo">Upload the photo of the vaccination Card</label>
+                <input type="file" id="pet-photo" accept="image/*" required>
+            </div>
+            <div class="input-box">
+                <label for="pet-photo">Upload a Photo of Your Pet</label>
+                <input type="file" id="pet-photo" accept="image/*" required>
+            </div>
+            <div class="input-box">
+                <label>
+                  <input type="checkbox" id="terms-checkbox" required>
+                  I agree to the <a href="#" id="view-terms">Terms and Conditions</a>
+                </label>
+              </div>
+              
+              <!-- Modal structure -->
+              <div id="terms-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Terms and Conditions</h2>
+                  <p>
+                    <!-- You can replace this text with your real terms -->
+Effective Date: 2025-05-01
+<br>
+By registering your pet with FurSure, you agree to comply with the following Terms and Conditions. Please read them carefully.
+<br>
+1. <strong>Eligibility</strong>
+The registrant must be 18 years or older.
+Only domesticated animals (e.g., dogs, cats) are eligible unless otherwise stated.
+Pet owners must reside within the jurisdiction or service area of <strong>Barangay Tadiangan.</strong>
+<br>
+2. <strong>Registration Requirements</strong>
+Accurate and complete information about the pet (including name, breed, age, sex, color, and distinguishing features) must be provided.
+Vaccination records, especially rabies, must be up to date and submitted during registration.
+A recent photograph of the pet may be required.
+<br>
+3. <strong>Fees</strong>
+Registration fee is Free But Collar Imprinted with your Pets Qr Code have Charge.
+Renewal fees may be charged annually or as specified by The Goverment of Tadiangan.
+<br>
+4. <strong>Identification</strong>
+All registered pets must wear an Collar printed with Pets Qr Code with the registration number provided by FurSure.org.
+Lost or damaged tags can be replaced for an additional fee.
+<br>
+5. <strong>Owner Responsibilities</strong>
+Owners are responsible for keeping registration information current, including address and contact details.
+Owners must ensure their pet is well-cared for, not a public nuisance, and does not pose a threat to others.
+<br>
+6. <strong>Changes and Termination</strong>
+The government and the Organization have reserves the right to suspend or revoke registration if the pet is found to be mistreated, dangerous, or if false information was submitted.
+Owners may cancel registration at any time by notifying [Name of Organization].
+<br>
+7. <strong>Liability</strong>
+The organization is not liable for injuries, losses, or damages resulting from registered pets.
+Owners assume all liability for their pet’s actions.
+<br>
+8. <strong>Privacy</strong>
+Personal information collected during registration will be used solely for the purpose of pet identification and owner contact.
+Data will be handled according to FurSure's privacy policy.
+<br>
+9. <strong>Amendments</strong>
+Governement or FurSures reserves the right to amend these Terms and Conditions at any time. Changes will be communicated via [email/website/notice].
+By submitting your pet registration, you acknowledge that you have read, understood, and agreed to these Terms and Conditions.
+                  </p>
+                </div>
+              </div>
+            <button>Submit</button>
+        </form>
+    </section>
+    <script src="pet.js"></script>
+</body>
+</html>
